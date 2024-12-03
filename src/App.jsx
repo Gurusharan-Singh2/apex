@@ -11,6 +11,7 @@ import Navbar from './components/Navbar'
 import About from './pages/About'
 import './App.css'
 import Footer from './components/Footer'
+import Signup from './pages/Signup'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/doctors' element={<Doctors></Doctors>} />
         <Route path='/doctors/:speciality' element={<Doctors></Doctors>} />
         <Route path='/login' element={<Login></Login>} />
+        <Route path='/signup' element={<Signup></Signup>} />
         <Route path='/about' element={<About></About>} />
         <Route path='/contact' element={<Contact></Contact>} />
         <Route path='/my-profile' element={<MyProfile></MyProfile>} />
