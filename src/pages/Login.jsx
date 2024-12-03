@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const name = useRef(null);
@@ -34,9 +35,9 @@ const Login = () => {
         <p  className='text-gray-500  text-base py-3'>Password</p>
         <input className='w-full border border-gray-300 p-1 rounded-lg mb-2 ' type="password" name="password" ref={password} required />
         
-        <button className='px-5 py-2 rounded-full text-white my-2 bg-primary' type="submit">Signup</button>
+        <button className='px-5 py-2 rounded-full text-white my-2 bg-primary' type="submit">Login</button>
 
-        <p>New Account ? < a className='px-3 px-3 py-1 bg-primary hover:bg-red-600 text-white rounded-2xl text-sm' onClick={()=>navigate('/signup')}>Login</a></p>
+        <p>New Account ? < a className='px-3 px-3 py-1 bg-primary hover:bg-red-600 text-white rounded-2xl text-sm' onClick={()=>navigate('/signup')}>Signup</a></p>
       </form>
     </div>
     </div>
