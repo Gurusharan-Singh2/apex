@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Signup = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+  const navigate=useNavigate();
   
   
   const [FormData , SetformData]=useState();
@@ -43,7 +45,7 @@ const Signup = () => {
         
         <button className='px-5 py-2 rounded-full text-white my-2 bg-primary' type="submit">Signup</button>
 
-        <p>Already User? <a className='px-3 px-3 py-1 bg-primary hover:bg-red-600 text-white rounded-2xl text-sm' href="/login">Login</a></p>
+        <p>Already User? <a className='px-3 px-3 py-1 bg-primary hover:bg-red-600 text-white rounded-2xl text-sm' onClick={()=>navigate('/login')}>Login</a></p>
       </form>
     </div>
     </div>
