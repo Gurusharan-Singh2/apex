@@ -4,6 +4,7 @@ const Login = () => {
   const name = useRef(null);
   
   const password = useRef(null);
+  const navigate=useNavigate();
   
   const [FormData , SetformData]=useState();
   const handleSubmit = (e) => {
