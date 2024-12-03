@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+  
   
   const [FormData , SetformData]=useState();
   const handleSubmit = (e) => {
@@ -19,7 +21,7 @@ const Signup = () => {
     password.current.value=" ";
   };
 
-  console.log(FormData);
+  
   
 
   return (
@@ -40,6 +42,8 @@ const Signup = () => {
         <input className='w-full border border-gray-300 p-1 rounded-lg mb-2 ' type="password" name="password" ref={password} required />
         
         <button className='px-5 py-2 rounded-full text-white my-2 bg-primary' type="submit">Signup</button>
+
+        <p>Already User? <a className='px-3 px-3 py-1 bg-primary hover:bg-red-600 text-white rounded-2xl text-sm' href="/login">Login</a></p>
       </form>
     </div>
     </div>
