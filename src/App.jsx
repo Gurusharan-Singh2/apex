@@ -13,7 +13,7 @@ import './App.css'
 import Footer from './components/Footer'
 import Signup from './pages/Signup'
 import EditProfile from './pages/EditProfile'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 

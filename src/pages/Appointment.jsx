@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import { assets } from "../assets/assets";
+import { toast } from "react-toastify"; // Import ToastContainer and toast
+import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 
 const Appointment = () => {
   const { docId } = useParams();
@@ -73,6 +75,10 @@ const Appointment = () => {
   useEffect(() => {
     fetchDoc();
   }, [doctors, docId]);
+  const notify = () =>  toast.success("Appointment booked successfully!", {
+    position: toast.POSITION.TOP_RIGHT,
+    autoClose: 3000, // Close after 3 seconds
+  });
 
 
 
@@ -141,7 +147,11 @@ const Appointment = () => {
         </p>
       ))}
     </div>
-    <button className="bg-primary mt-8 text-white text-sm font-light px-14 py-5 rounded-full ">Book an Appointment</button>
+    <button className="bg-primary mt-8 text-white text-sm font-light px-14 py-5 rounded-full " onClick={()=>{
+      console.log("hiii");
+      
+       toast.success("Appointment booked successfully!")
+    }}>Book an Appointment</button>
    </div>
 
      
