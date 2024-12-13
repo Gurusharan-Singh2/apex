@@ -4,28 +4,23 @@ import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../context/AppContext';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const TopDoctors = () => {
-  const navigate=useNavigate();
-  gsap.registerPlugin(ScrollTrigger);
+
   useGSAP(()=>{
-    gsap.from(".doctorsdiv ",{
-      x:1200,
-      duration:1,
+    gsap.from(".doctor ",{
+      x:-1200,
+      
+      opacity: 0,
+  
+      delay: 0.2,
+      duration:2.5,
      
     
-      scrollTrigger:{
-        trigger:".doctor",
-        scroller:"body",
-       
-        start:"top 60%",
-        scrub:2,
-        end: "top 10%"
-      }
 
-    })
-  })
+    })})
+  const navigate=useNavigate();
+ 
   const {doctors}=useContext(AppContext)
   return (
     <div className=' doctorsdiv flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10'>
