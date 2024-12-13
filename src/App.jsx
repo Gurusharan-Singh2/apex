@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Doctors from './pages/Doctors'
@@ -13,11 +13,16 @@ import './App.css'
 import Footer from './components/Footer'
 import Signup from './pages/Signup'
 import EditProfile from './pages/EditProfile'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const App = () => {
   return (
     <div className=' mx-4 sm:mx-[10%]'>
-      <Navbar></Navbar>
+    <Navbar></Navbar>
+      
+      <ToastContainer></ToastContainer>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/doctors' element={<Doctors></Doctors>} />
